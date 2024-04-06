@@ -1,0 +1,41 @@
+*{
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(246, 255, 233);
+}
+
+.titulo {
+    background-image: url('../images/titulo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding: 20px;
+  }
+  
+  .titulo .col-lg-6 {
+    /* Agrega estilos adicionales según sea necesario */
+  }
+  
+  .titulo .p-4 {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .titulo h1{
+    color: rgb(0, 0, 0);
+  }
+
+  .titulo p{
+    color: rgb(255, 255, 255);
+  }
+
+  .thumbnail-container {
+    background-image: url('../images/flores_plastico.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    height: 250px; /* Ajusta la altura según sea necesario */
+    display: inline-block; /* Ajusta el comportamiento de visualización según tus necesidades */
+  }
