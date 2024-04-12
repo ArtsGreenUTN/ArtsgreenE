@@ -32,19 +32,20 @@ Se ha eliminado con éxito.
             <form class="row g-6" id="subirPublicacion">
                 <div class="col-md-12">
                     <label for="titulo" class="form-label">Título</label>
-                    <input type="text" class="form-control" id="titulo">
+                    <input type="text" class="form-control" id="titulo" required>
                 </div>
                 <div class="col-md-12">
                     <label for="descripcion" class="form-label">Descripción</label>
-                    <textarea class="form-control" id="descripcion" rows="3" placeholder="Introduce una descripción"></textarea>
+                    <textarea class="form-control" id="descripcion" rows="3" placeholder="Introduce una descripción" required></textarea>
                 </div>
                 <div class="col-md-12">
                     <label for="materiales" class="form-label">Materiales</label>
-                    <textarea class="form-control" id="materiales" rows="3" placeholder="Introduce los materiales"></textarea>
+                    <textarea class="form-control" id="materiales" rows="3" placeholder="Introduce los materiales" required></textarea>
                 </div>
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="video">Subir video</label>
-                    <input type="file" class="form-control" id="video">
+                    <input type="file" class="form-control" id="video" title="Debe subir un video." required>
+                    <small id="passwordHelp" class="form-text text-muted">Recuerde que segun el tamño de su video, puede demorar un poco.</small>
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Subir Publicación</button>

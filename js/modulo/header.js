@@ -8,9 +8,10 @@ import { generateMD5Hash } from "../operedor/codificador.js";
 import { mandarDatos,consultaVarPers, modificaVarPers, agregarVarPers , limpiarVarPers} from "../modulo/login.js";
 
 //Header del alumno
-const baseLocD =`<nav class="navbar navbar-expand-lg navbar-light bg-light">
+const baseLocD =`<nav class="navbar navbar-expand-lg navbar-light bg-success">
+style="background-color: #61A716;">
 <div class="container-fluid">
-  <a class="navbar-brand" href="index.html">ArtsGreen</a>
+  <a class="navbar-brand" style="color:#C2C2C2" href="index.html">ArtsGreen</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -35,10 +36,10 @@ const baseLocD =`<nav class="navbar navbar-expand-lg navbar-light bg-light">
 `;
 
 //Head de profesores
-const baseLoc =`<nav class="navbar navbar-expand-lg navbar-light bg-light">
+const baseLoc =`<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #61A716;">
 <div class="container-fluid">
   <!-- Título ArtsGreen -->
-  <a class="navbar-brand d-lg-none" href="#">ArtsGreen</a>
+  <a class="navbar-brand d-lg-none" style="color:#C2C2C2" href="#">ArtsGreen</a>
   <!-- Botón de hamburguesa -->
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -74,10 +75,11 @@ const baseLoc =`<nav class="navbar navbar-expand-lg navbar-light bg-light">
 `;
 
 //Head de director
-const base =`<nav class="navbar navbar-expand-lg navbar-light bg-light">
+const base =`<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #61A716;">
+
 <div class="container-fluid">
   <!-- Título -->
-  <a class="navbar-brand" href="#">ArtsGreen</a>
+  <a class="navbar-brand" style="color:#C2C2C2" href="#">ArtsGreen</a>
   <!-- Botón para la versión móvil -->
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -146,14 +148,15 @@ const base =`<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 //Header del visitante/iniciar sesion
 const login =`<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #61A716;">
+
   <div class="container-fluid">
     <!-- Botón para la versión móvil -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Logo -->
-    <a class="navbar-brand" href="#">ArtsGreen</a>
+    <a class="navbar-brand" style="color:#C2C2C2" href="#">ArtsGreen</a>
     <!-- Contenido del menú -->
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -244,11 +247,11 @@ const login =`<!-- Navbar -->
                   <form id="loginAP">
                     <div class="form-group">
                       <label for="username">Usuario:</label>
-                      <input type="text" class="form-control" id="usernameff" name="username" placeholder="Ingrese su usuario">
+                      <input type="text" class="form-control" id="usernameff" name="username" placeholder="Ingrese su usuario" required>
                     </div>
                     <div class="form-group">
                       <label for="password">Contraseña:</label>
-                      <input type="password" class="form-control" id="passwordff" name="password" placeholder="Ingrese su contraseña">
+                      <input type="password" class="form-control" id="passwordff" name="password" placeholder="Ingrese su contraseña" required>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
                   </form>
@@ -366,13 +369,13 @@ onAuthStateChanged(auth, (user) => {
         console.log("Variable persistente encontrada:", resultado);
         header.innerHTML=baseLoc;
         if (resultado.hasOwnProperty('id_grupo')) {
-          console.log("No");
+          //console.log("No");
           header.innerHTML=baseLocD;
           document.getElementById('grupAlum').href=`./grupo.html?id=${resultado.id_grupo}`;
         }
         let logoutg = document.getElementById('logoutg_local');
         logoutg.addEventListener('click', ()=>{
-          console.log("si");
+          //console.log("si");
           limpiarVarPers()
           .then(resultado =>{
             location.href="/index.html";

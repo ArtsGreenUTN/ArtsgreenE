@@ -27,11 +27,11 @@ var modal = `<div class="container">
         <input type="text" class="form-control" id="idG" name="idG" hidden>
           <div class="mb-3">
             <label for="nombre_alumno" class="form-label">Nombre de Alumno</label>
-            <input type="text" class="form-control" id="nombre_alumno" name="nombre_alumno">
+            <input type="text" class="form-control" id="nombre_alumno" name="nombre_alumno" required>
           </div>
           <div class="mb-3">
           <label for="contra_alumno" class="form-label">Contraseña de Alumno</label>
-          <input type="text" class="form-control" id="contra_alumno" name="contra_alumno">
+          <input type="text" class="form-control" id="contra_alumno" name="contra_alumno" required>
         </div>
           <button type="submit" class="btn btn-primary">Agregar Alumno</button>
           <div id="alert"></div>

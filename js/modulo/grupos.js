@@ -26,7 +26,7 @@ var modal = `<div class="container">
         <input type="text" class="form-control" id="ruta" name="ruta" hidden>
           <div class="mb-3">
             <label for="nombre_grupo" class="form-label">Nombre de Grupo</label>
-            <input type="text" class="form-control" id="nombre_grupo" name="nombre_grupo">
+            <input type="text" class="form-control" id="nombre_grupo" name="nombre_grupo" required>
           </div>
           <button type="submit" class="btn btn-primary">Agregar Grupo</button>
           <div id="alert"></div>

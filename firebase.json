@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "artsgreen",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

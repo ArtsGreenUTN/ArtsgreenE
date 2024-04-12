@@ -22,6 +22,11 @@ function existe(usernamef,passwordf) {
                         const usr = data[key];
                         if (usr.clave_usuario == usernamef) {
                             console.log("Usuario encontrado.");
+                            
+                            
+                            if (usr.contrasena != passwordf) {
+                                alert("Contraseña incorrecta.");                         
+                            }
                             usuarioEncontrado = true;
                         }
                     });
@@ -29,6 +34,7 @@ function existe(usernamef,passwordf) {
                 }
             } else {
                 console.log('No hay datos disponibles en la colección "logueos".');
+                alert("Contraseña incorrecta");
                 resolve(false);
             }
         }).catch((error) => {
@@ -77,7 +83,7 @@ export async function mandarDatos(usernamef, passwordf) {
             await agregarVarPers(nuevoObjeto);
             console.log("logueado."); 
         } else {
-            console.log("El usuario no existe.");
+            alert("El usuario no existe.");
         }
         
         return verificaLog;
@@ -98,6 +104,7 @@ function consultaVarPers() {
         if (loguerPersistente) {
             resolve(loguerPersistente); // Resuelve la promesa con los datos de la variable persistente
         } else {
+            
             reject("No se encontró la variable persistente"); // Rechaza la promesa si no se encuentra la variable persistente
         }
     });

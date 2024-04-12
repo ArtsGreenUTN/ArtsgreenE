@@ -21,27 +21,29 @@ var modal=`<div class="container">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
       </div>
       <div class="modal-body">
-        <form id="form_subr">
-        <input type="text" class="form-control" id="id_c" name="id_c" hidden>
-          <div class="mb-3">
-            <label for="nombre_profesor" class="form-label">Nombre de Profesor</label>
-            <input type="text" class="form-control" id="nombre_profesor" name="nombre_profesor">
-          </div>
-          <div class="mb-3">
-            <label for="usuario_profesor" class="form-label">Usuario de Profesor</label>
-            <input type="text" class="form-control" id="usuario_profesor" name="usuario_profesor">
-          </div>
-          <div class="mb-3">
-            <label for="contraseña_profesor" class="form-label">Contraseña de Profesor</label>
-            <input type="password" class="form-control" id="contraseña_profesor" name="contraseña_profesor">
-          </div>
-          <div class="mb-3">
-            <label for="materia" class="form-label">Materia</label>
-            <input type="text" class="form-control" id="materia" name="materia">
-          </div>
-          <button type="submit" class="btn btn-primary">Agregar Profesor</button>
-          <div id="alert"></div>
-        </form>
+      <form id="form_subr">
+      <input type="text" class="form-control" id="id_c" name="id_c" hidden>
+      <div class="mb-3">
+        <label for="nombre_profesor" class="form-label">Nombre de Profesor</label>
+        <input type="text" class="form-control" id="nombre_profesor" name="nombre_profesor" required>
+      </div>
+      <div class="mb-3">
+        <label for="usuario_profesor" class="form-label">Usuario de Profesor</label>
+        <input type="text" class="form-control" id="usuario_profesor" name="usuario_profesor" required>
+      </div>
+      <div class="mb-3">
+        <label for="contraseña_profesor" class="form-label">Contraseña de Profesor</label>
+        <input type="password" class="form-control" id="contraseña_profesor" name="contraseña_profesor" pattern="^(?=.*[A-Z]).{10,}$" title="La contraseña debe tener al menos 10 caracteres e incluir al menos una mayúscula." required>
+        <small id="passwordHelp" class="form-text text-muted">La contraseña debe tener al menos 10 caracteres e incluir al menos una mayúscula.</small>
+      </div>
+      <div class="mb-3">
+        <label for="materia" class="form-label">Materia</label>
+        <input type="text" class="form-control" id="materia" name="materia" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Agregar Profesor</button>
+      <div id="alert"></div>
+    </form>
+    
       </div>
       <div class="modal-footer">
       </div>
@@ -345,3 +347,5 @@ onAuthStateChanged(auth, (user) => {
 
     }
 });
+
+
